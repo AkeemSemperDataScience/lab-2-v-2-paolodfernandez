@@ -20,7 +20,7 @@ def lab2Question3(str1, str2):
     count = 0
     sub_len = len(str2)
     str1 = str1.lower()
-    
+
     for i in range(len(str1)):
         if str1[i:i + sub_len] == str2:
             count += 1
@@ -30,9 +30,10 @@ def lab2Question4(list1, list2):
     # Create a function that takes in two equal length list of numbers. 
     # Return a list of the element-wise sum of the two lists - i.e. the first element of the output list is the sum of the first elements of the input lists
     # If the condition of the function is not satisfied, return a blank list
-    pass
-
-    return sum_list
+    if len(list1) == len(list2):
+     sum_list = [x + y for x, y in zip(list1, list2)]
+     return sum_list
+    else: return []
 
 def lab2Question5():
     # Create a function* that asks a user to enter a password that meets the following criteria:
