@@ -9,12 +9,10 @@ def lab2Question1(word):
 def lab2Question2(number_val):
     # Create a function that takes in a number
     # Return a list of the fibonacci sequence up to that number
-    seq = []
-    x, y = 0, 1
-    while x <= number_val:
-        seq.append(x)
-        x, y = y, x + y
-        return seq
+    list = [0,1]
+    for i in range(2,number_val):
+        list.append(list[i-2]) + list[i-1]
+    return list
 
 def lab2Question3(str1, str2):
     # Create a function that takes in two strings - str1 and str2
