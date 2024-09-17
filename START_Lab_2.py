@@ -10,13 +10,10 @@ def lab2Question2(number_val):
     # Create a function that takes in a number
     # Return a list of the fibonacci sequence up to that number
     fibseq = [0,1]
-
     if number_val<1:
         return []
-    
     while number_val >= fibseq[-1] + fibseq[-2]:
         fibseq.append(fibseq[-1] + fibseq[-2])
-    
     return fibseq
 
 def lab2Question3(str1, str2):
@@ -26,7 +23,6 @@ def lab2Question3(str1, str2):
     count = 0
     sub_len = len(str2)
     str1 = str1.lower()
-
     for i in range(len(str1)):
         if str1[i:i + sub_len] == str2:
             count += 1
