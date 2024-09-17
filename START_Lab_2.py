@@ -17,10 +17,13 @@ def lab2Question2(number_val):
         return seq
 
 def lab2Question3(str1, str2):
-    # Create a function that takes in two strings - str1 and str2
-    # Return the number of times str2 appears in str1
-    # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
-    pass
+    count = 0
+    sub_len = len(str2)
+    lower_str1 = str1.lower()
+    for i in range(len(lower_str1)):
+        if str1[i:i + sub_len] == str2:
+            count += 1
+    return count
 
 def lab2Question4(list1, list2):
     # Create a function that takes in two equal length list of numbers. 
