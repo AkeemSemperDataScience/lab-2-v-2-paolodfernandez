@@ -56,5 +56,29 @@ def isValidPassword(password):
     # - Contains at least one uppercase letter
     # - Contains at least one lowercase letter
     # - Contains at least one number
-    pass
+    if len(password) < 8:
+        return False
+    
+    uppercase_in_password = False
+    for character in password:
+        if character.isupper():
+            uppercase_in_password = True
+    if not uppercase_in_password:
+        return False
+    
+    lowercase_in_password = False
+    for character in password:
+        if character.islower():
+            lowercase_in_password = True
+    if not lowercase_in_password:
+        return False
+    
+    number_in_password = False
+    for character in password:
+        if character in '0123456789':
+            number_in_password = True
+    if not number_in_password:
+        return False
+
+    return True
 
