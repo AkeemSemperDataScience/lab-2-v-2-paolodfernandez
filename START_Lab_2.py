@@ -19,8 +19,9 @@ def lab2Question2(number_val):
 def lab2Question3(str1, str2):
     count = 0
     sub_len = len(str2)
-    lower_str1 = str1.lower()
-    for i in range(len(lower_str1)):
+    str1 = str1.lower()
+    
+    for i in range(len(str1)):
         if str1[i:i + sub_len] == str2:
             count += 1
     return count
